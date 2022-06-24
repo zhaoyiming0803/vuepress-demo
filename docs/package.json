@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "/vuepress-demo",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@anyui/alipay-base": "^0.4.4",
+    "vuepress": "^1.5.3"
+  }
+}
