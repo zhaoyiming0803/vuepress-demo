@@ -31,7 +31,7 @@ module.exports = function cacheSidebarPlugin (options, ctx) {
     clientDynamicModules() {
       return {
         name: 'constants.js',
-        content: `export const sidebarList = '${JSON.stringify(customPageRegularPathMap)}'`
+        content: `export const sidebarList = ${JSON.stringify(customPageRegularPathMap)}`
       }
     }
   }

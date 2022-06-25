@@ -19,13 +19,12 @@
           console.log('this.$site: ', this.$site)
           console.log('this.$page: ', this.$page)
 
-          const list = JSON.parse(sidebarList)
-          console.log('sidebarList: ', list)
+          console.log('sidebarList: ', sidebarList)
           
           const matchedNav = this.$page.regularPath.match(/\/(.*)\//)
           if (matchedNav) {
             const currentNav = matchedNav[0]
-            console.log('list: ', list[currentNav].list)
+            console.log('list: ', sidebarList[currentNav].list)
           }
         },
         immediate: true,
