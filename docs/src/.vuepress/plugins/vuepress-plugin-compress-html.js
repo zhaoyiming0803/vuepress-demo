@@ -1,6 +1,7 @@
 const { minify } = require('html-minifier-terser')
 const fs = require('fs')
 const async = require('async')
+const chalk = require('chalk')
 
 module.exports = function compressHtmlPlugin () {
   return {
@@ -18,7 +19,15 @@ module.exports = function compressHtmlPlugin () {
         }
       })
 
-      async.parallel(tasks)
+      async.parallel(tasks, (error) => {
+        const message = 'Compressed html !!!'
+
+        if (!error) {
+          return console.log(chalk.green('success'), message)
+        }
+
+        console.log(chalk.red('fail'), message)
+      })
     }
   }
 }
