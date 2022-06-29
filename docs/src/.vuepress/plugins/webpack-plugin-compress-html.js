@@ -5,7 +5,7 @@ const { minify } = require('html-minifier-terser')
 class CompressHtmlWebpackPlugin {
   apply (compiler) {
     compiler.hooks.emit.tap('CompressHtmlWebpackPlugin', compilation => {
-      return console.log(compilation)
+      return
       Object.keys(compilation.assets).forEach(key => {
         console.log(key)
       })
