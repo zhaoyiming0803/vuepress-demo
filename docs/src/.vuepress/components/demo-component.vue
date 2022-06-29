@@ -15,16 +15,16 @@
     watch: {
       '$route': {
         handler () {
-          console.log('this: ', this)
-          console.log('this.$site: ', this.$site)
-          console.log('this.$page: ', this.$page)
+          // console.log('this: ', this)
+          // console.log('this.$site: ', this.$site)
+          // console.log('this.$page: ', this.$page)
 
-          console.log('sidebarList: ', sidebarList)
+          // console.log('sidebarList: ', sidebarList)
           
           const matchedNav = this.$page.regularPath.match(/\/(.*)\//)
           if (matchedNav) {
             const currentNav = matchedNav[0]
-            console.log('list: ', sidebarList[currentNav].list)
+            // console.log('list: ', sidebarList[currentNav].list)
           }
         },
         immediate: true,

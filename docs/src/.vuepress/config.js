@@ -1,5 +1,7 @@
 const { description } = require('../../package')
 const cacheSidebarPlugin = require('./plugins/vuepress-plugin-cache-sidebar')
+const compressHtmlVuepressPlugin = require('./plugins/vuepress-plugin-compress-html')
+const compressHtmlWebpackPlugin = require('./plugins/webpack-plugin-compress-html')
 
 module.exports = {
   /**
@@ -87,6 +89,12 @@ module.exports = {
         a: 1,
         b: 2
       }
+    ],
+    [
+      compressHtmlVuepressPlugin
+    ],
+    [
+      compressHtmlWebpackPlugin
     ]
   ]
 }
